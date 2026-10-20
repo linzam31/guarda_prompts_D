@@ -1,0 +1,16 @@
+body {
+    background-color: #afafaf;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-p {
+    display: flex;
+    border: 1px solid #000;
+    padding: 1rem;
+    margin: 10px;
+    border-radius: 10px;
+}   
+
+label{
+
+}
