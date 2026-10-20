@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de prompts</title>
+    <link rel="stylesheet" href="./static/styles.css">
+</head>
+
+<body>
+    
+    <form method="POST" action="{{ url_for('guardar_prompt')}}">
+        <h1>Tu Asistente para gestionar prompts</h1>
+        <div class="container">
+            <label for="prompts">Agrega un prompt</label>
+            <textarea id="prompt" name="prompts" placeholder="Escribe tu prompt..."></textarea>
+            <button type="submit">Guardar</button>
+        </div>
+    </form>
+
+    <h2>Prompts que has guardado:</h2>
+    <div class="container">
+        {% for prompt in prompts %}
+            <p>{{ prompt[0] }}</p>
+        {% endfor %}
+    </div>
+    
+</body>
+
+</html>
