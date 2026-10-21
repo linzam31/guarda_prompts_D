@@ -1,16 +1,110 @@
-body {
-    background-color: #afafaf;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+*{
+    justify-content: center;
 }
 
-.container-p {
+body {
+    background-color: #0a1016;
+    font-family: 'Poppins', sans-serif;
+}
+
+form{
     display: flex;
-    border: 1px solid #000;
+    flex-direction: column;
+    justify-content: center ;    
+    align-items: center;
+}
+
+h2, h1{
+    text-align: center;
+    color: #fafafa;
+}
+
+h2{
+    margin-top: 80px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    box-shadow: 0 0 15px 5px #2b4218;
+    padding: 1rem;
+    margin: 10px;
+    width: 600px;
+    border-radius: 10px;
+    color: #fafafa;
+
+}   
+
+textarea{
+    width: 400px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #488C03;
+    background-color: #0a1016;
+    color: #488C03;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+textarea::placeholder{
+    color: #488C03;
+}
+
+button{
+    border: 1px solid #2b4218;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #488C03;
+    color: #0a1016;
+}
+
+button:hover{
+    background-color: #0a1016;
+    border: 1px solid #488C03;
+    color: #488C03;
+}
+
+label{
+    display: flex;
+    
+}
+
+
+ul{
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    border-radius: 10px;
+    list-style-type: none;  
+}
+
+li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
     margin: 10px;
     border-radius: 10px;
-}   
+    width: 200px;
+    height: 50px;
+    color: #fafafa;
+    background: linear-gradient(135deg, #0a1016, #2b4218 );
 
-label{
 
+}
+
+li:hover{
+    cursor: pointer;
+    background: linear-gradient(135deg, #2b4218, #0a1016 );
+    border: 1px solid #488C03;
+    color: #488C03;
 }
