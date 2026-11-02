@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, redirect, url_for
 from data_base import database
 
@@ -20,7 +21,7 @@ def guardar_prompt():
     conn = database()
     cursor = conn.cursor()
 
-    cursor.execute ("INSERT INTO card (prompt) VALUES (%s)", (prompts,))
+    cursor.execute ("INSERT INTO card (prompt) VALUES (?)", (prompts,))
 
     conn.commit()
     cursor.close()
@@ -29,4 +30,6 @@ def guardar_prompt():
     return redirect(url_for('inicio'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Asigna el puerto de Render en la nube o el 5000 en local
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
