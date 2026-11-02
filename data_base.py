@@ -1,6 +1,6 @@
 import sqlite3
 
-def conectar():
+def database():
     conexion = sqlite3.connect("prompts.db")
     cursor = conexion.cursor()
 
